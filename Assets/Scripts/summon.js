@@ -2,7 +2,10 @@
 
 var id : int;
 var prefab : GameObject;
+var amount :int=1;
 
 function SummonMonster () {
-	Instantiate(prefab, GameObject.Find("MySpawnPoint").transform.position,Quaternion.identity);
+	if(GameObject.Find("Energy").GetComponent(Energy).SpendEnergy(amount)) {
+		Instantiate(prefab, GameObject.Find("MySpawnPoint").transform.position,Quaternion.identity);
+	}
 }
