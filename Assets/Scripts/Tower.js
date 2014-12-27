@@ -1,9 +1,6 @@
 ﻿#pragma strict
+var hp_ui:GameObject;
 
-import UnityEngine.UI;
-
-var hp : int = 100;
-
-function Update () {
-	GameObject.Find("EnemyHP").GetComponent(Text).text = hp.ToString();
+function LostHp (amount : int) {
+	hp_ui.SendMessage("UI_LostHP",amount);
 }

@@ -8,8 +8,8 @@ function Update(){
 }
 
 function OnTriggerEnter2D (other : Collider2D){
-	if(other.tag == "EnemyTower"){
-		other.GetComponent(EnemyTower).LostHp(atk);
+	if(other.tag == "EnemyTower" || other.tag == "MyTower"){
+		other.GetComponent(Tower).LostHp(atk);
 		Destroy(gameObject);
 	}
 }
