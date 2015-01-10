@@ -1,5 +1,6 @@
 ﻿#pragma strict
 
+import UnityEngine.UI;
 var nowEnergy : int = 100;
 var maxEnergy : int = 100;
 
